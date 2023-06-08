@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Chord Progression Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="content" class="flex-column">
+      <div id="content-header" class="flex-column mb-5">
+        <h1>Simple Chord Progression Generator</h1>
+      </div>
+      <div class="whole-keyboard justify-content-center d-flex">
+        <div class="keyboard-container mb-4">
+          <div class="wholetones-container">
+            <button id="C" class="key"><p>C</p></button>
+            <button id="D" class="key"><p>D</p></button>
+            <button id="E" class="key"><p>E</p></button>
+            <button id="F" class="key"><p>F</p></button>
+            <button id="G" class="key"><p>G</p></button>
+            <button id="A" class="key"><p>A</p></button>
+            <button id="B" class="key"><p>B</p></button>
+          </div>
+          <div class="semitones-container">
+            <button class="C key" id="C#">C#</button>
+            <button class="D key" id="D#">D#</button>
+            <button class="F key" id="F#">F#</button>
+            <button class="G key" id="G#">G#</button>
+            <button class="A key" id="A#">A#</button>
+          </div>
+        </div>
+        <div class="keyboard-container mb-4">
+          <div class="wholetones-container">
+            <button id="C1" class="key"><p>C</p></button>
+            <button id="D1" class="key"><p>D</p></button>
+            <button id="E1" class="key"><p>E</p></button>
+            <button id="F1" class="key"><p>F</p></button>
+            <button id="G1" class="key"><p>G</p></button>
+            <button id="A1" class="key"><p>A</p></button>
+            <button id="B1" class="key"><p>B</p></button>
+          </div>
+          <div class="semitones-container">
+            <button class="C key" id="C#1">C#</button>
+            <button class="D key" id="D#1">D#</button>
+            <button class="F key" id="F#1">F#</button>
+            <button class="G key" id="G#1">G#</button>
+            <button class="A key" id="A#1">A#</button>
+          </div>
+        </div>
+      </div>
+      <div id="generator" class="flex-column mt-4">
+        <div id="generator-options" class="flex-row mb-4">
+          <select name="key" id="key" class="mx-1 fw-bold">
+            <option value="c">C</option>
+            <option value="c#">C#</option>
+            <option value="d">D</option>
+            <option value="d#">D#</option>
+            <option value="e">E</option>
+            <option value="f">F</option>
+            <option value="f#">F#</option>
+            <option value="g">G</option>
+            <option value="g#">G#</option>
+            <option value="a">A</option>
+            <option value="a#">A#</option>
+            <option value="b">B</option>
+          </select>
+          <select name="scale" id="scale" class="mx-1 fw-bold">
+            <option value="major">Major</option>
+            <option value="minor">Minor</option>
+          </select>
+          <button onclick="generate()" id="generate" class="mx-1 fw-bold">Generate</button>
+        </div>
+        <div id="generated-progression" class="flex-row">
+          <div class="chord-tile flex-column" id="chord1"></div>
+          <div class="chord-tile flex-column" id="chord2"></div>
+          <div class="chord-tile flex-column" id="chord3"></div>
+          <div class="chord-tile flex-column" id="chord4"></div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
