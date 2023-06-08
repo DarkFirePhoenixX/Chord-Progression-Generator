@@ -1,21 +1,21 @@
 const scales = {
     c: {
-        major: ["C", "D", "Em", "F", "G", "Am", "Bdim"],
+        major: ["C", "Dm", "Em", "F", "G", "Am", "Bdim"],
         minor: ["Cm", "Ddim", "Eb", "Fm", "Gm", "Ab", "Bb"]
     },
 
     'c#': {
-        major: ['C#', 'D#', 'Fm', 'F#', 'G#', 'Bbm', 'Cdim'],
+        major: ['C#', 'D#m', 'E#m', 'F#', 'G#', 'Bbm', 'Cdim'],
         minor: ['C#', 'D#dim', 'E', 'F#m', 'G#m', 'A', 'B']
     },
 
     d: {
         major: ['D', 'E', 'F#m', 'G', 'A', 'Bm', 'Cdim'],
-        minor: ['Dm', 'Edim', 'F', 'Gm', 'Am', 'B', 'C']
+        minor: ['Dm', 'Edim', 'F', 'Gm', 'Am', 'Bb', 'C']
     },
 
     'd#': {
-        major: ['D#', 'F', 'Gm', 'G#', 'A#', 'Cm', 'Ddim'],
+        major: ['D#', 'Fm', 'Gm', 'G#', 'A#', 'Cm', 'Ddim'],
         minor: ['D#m', 'Fdim', 'F#', 'G#m', 'Bbm', 'B', 'C#']
     },
 
@@ -25,12 +25,12 @@ const scales = {
     },
 
     f: {
-        major: ['F', 'G', 'Am', 'A#', 'C', 'Dm', 'Edim'],
+        major: ['F', 'Gm', 'Am', 'A#', 'C', 'Dm', 'Edim'],
         minor: ['Fm', 'Gdim', 'G#', 'Bbm', 'Cm', 'C#', 'D#']
     },
 
     'f#': {
-        major: ['F#', 'G#', 'Bbm', 'B', 'C#', 'D#m', 'Fdim'],
+        major: ['F#', 'G#m', 'Bbm', 'B', 'C#', 'D#m', 'Fdim'],
         minor: ['F#m', 'G#dim', 'A', 'Bm', 'C#m', 'D', 'E']
     },
 
@@ -45,12 +45,12 @@ const scales = {
     },
 
     a: {
-        major: ['A', 'B', 'C#m', 'D', 'E', 'F#m', 'G#dim'],
+        major: ['A', 'Bm', 'C#m', 'D', 'E', 'F#m', 'G#dim'],
         minor: ['Am', 'Bdim', 'C', 'Dm', 'Em', 'F', 'G']
     },
 
     'a#': {
-        major: ['A#', 'C', 'Dm', 'D#', 'F', 'Gm', 'Adim'],
+        major: ['A#', 'Cm', 'Dm', 'D#', 'F', 'Gm', 'Adim'],
         minor: ['Bbm', 'Cdim', 'C#', 'D#m', 'Fm', 'F#', 'G#']
     },
 
@@ -115,6 +115,120 @@ function generate() {
     var scale = document.getElementById("scale").value;
 
     var generatedProgression = generator(scales[key][scale]);
+    if(key == "c" && scale == "major" || key == "a" && scale == "minor"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.querySelectorAll(".whiteKey").forEach(element => element.classList.add("border-dark", "border-3", "bg-warning"))
+    }
+    else if(key == "c" && scale == "minor" || key == "d#" && scale == "major"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.getElementById("C2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("D2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("D#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("F2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A#2").classList.add("border-dark", "border-3", "bg-warning")
+    }
+    else if(key == "d" && scale == "major" || key == "b" && scale == "minor"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.getElementById("D2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("E2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("F#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("B2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
+    }
+    else if(key == "d" && scale == "minor" || key == "f" && scale == "major"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.getElementById("D2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("E2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("F2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("C2").classList.add("border-dark", "border-3", "bg-warning")
+    }
+    else if(key == "e" && scale == "major" || key == "c#" && scale == "minor"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.getElementById("E2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("F#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("B2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("D#2").classList.add("border-dark", "border-3", "bg-warning")
+    }
+    else if(key == "e" && scale == "minor" || key == "g" && scale == "major"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.getElementById("E2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("F#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("B2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("D2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("C2").classList.add("border-dark", "border-3", "bg-warning")
+    }
+    else if(key == "f" && scale == "minor" || key == "g#" && scale == "major"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.getElementById("F2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("C2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("D#2").classList.add("border-dark", "border-3", "bg-warning")
+    }
+    else if(key == "g" && scale == "minor" || key == "a#" && scale == "major"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.getElementById("G2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("C2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("D2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("D#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("F2").classList.add("border-dark", "border-3", "bg-warning")
+    }
+    else if(key == "a" && scale == "major" || key == "f#" && scale == "minor"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.getElementById("A2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("B2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("D2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("E2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("F#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G#2").classList.add("border-dark", "border-3", "bg-warning")
+    }
+    else if(key == "b" && scale == "major" || key == "g#" && scale == "minor"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.getElementById("B2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("D#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("E2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("F#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A#2").classList.add("border-dark", "border-3", "bg-warning")
+    }
+    else if(key == "c#" && scale == "major" || key == "a#" && scale == "minor"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("D#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("F2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("F#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("B2").classList.add("border-dark", "border-3", "bg-warning")
+    }
+    else if(key == "f#" && scale == "major" || key == "d#" && scale == "minor"){
+        document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
+        document.getElementById("F#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("G#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("A#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("B2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("D#2").classList.add("border-dark", "border-3", "bg-warning")
+        document.getElementById("F2").classList.add("border-dark", "border-3", "bg-warning")
+    }
 
     for (let i = 1; i < 5; i++) {
         document.getElementById("chord" + i).innerHTML = generatedProgression.shift();
@@ -143,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (element.innerHTML == "C#") {
             document.querySelectorAll(".key").forEach(element => element.classList.remove("border-dark", "border-3", "bg-danger"))
             document.getElementById("C#").classList.add("border-dark", "border-3", "bg-danger")
-            document.getElementById("E").classList.add("border-dark", "border-3", "bg-danger")
+            document.getElementById("F").classList.add("border-dark", "border-3", "bg-danger")
             document.getElementById("G#").classList.add("border-dark", "border-3", "bg-danger")
         }
         if (element.innerHTML == "C#m") {
