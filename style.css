@@ -1,19 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One|Noto+Sans&display=swap");
 
 body {
-  color: #dddddd;
   font-family: 'Noto Sans', sans-serif;
   font-weight: 600;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: -moz-linear-gradient(top, #d146ff 0%, #3f046e 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d146ff), color-stop(100%, #3f046e));
-  background: -webkit-linear-gradient(top, #d146ff 0%, #3f046e 100%);
-  background: -o-linear-gradient(top, #d146ff 0%, #3f046e 100%);
-  background: -ms-linear-gradient(top, #d146ff 0%, #3f046e 100%);
-  background: linear-gradient(to bottom, #d146ff 0%, #3f046e 100%);
+  background: -moz-linear-gradient(top, #d969fe 0%, #3f046e 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d969fe), color-stop(100%, #3f046e));
+  background: -webkit-linear-gradient(top, #d969fe 0%, #3f046e 100%);
+  background: -o-linear-gradient(top, #d969fe 0%, #3f046e 100%);
+  background: -ms-linear-gradient(top, #d969fe 0%, #3f046e 100%);
+  background: linear-gradient(to bottom, #d969fe 0%, #3f046e 100%);
 }
 
 #content {
@@ -128,17 +127,8 @@ button {
   font-size: 25px;
 }
 
-footer {
-  background-color: #373737;
-  text-align: center;
-  padding: 20px;
-  -webkit-box-flex: 5;
-  -ms-flex: 5;
-  flex: 5;
-}
-
-footer p {
-  margin: 5px;
+.footer {
+  font-size: 0.8rem;
 }
 
 .keyboard-container {
