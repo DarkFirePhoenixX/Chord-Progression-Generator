@@ -115,11 +115,11 @@ function generate() {
     var scale = document.getElementById("scale").value;
 
     var generatedProgression = generator(scales[key][scale]);
-    if(key == "c" && scale == "major" || key == "a" && scale == "minor"){
+    if (key == "c" && scale == "major" || key == "a" && scale == "minor") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.querySelectorAll(".whiteKey").forEach(element => element.classList.add("border-dark", "border-3", "bg-warning"))
     }
-    else if(key == "c" && scale == "minor" || key == "d#" && scale == "major"){
+    else if (key == "c" && scale == "minor" || key == "d#" && scale == "major") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.getElementById("C2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("D2").classList.add("border-dark", "border-3", "bg-warning")
@@ -129,7 +129,7 @@ function generate() {
         document.getElementById("G#2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("A#2").classList.add("border-dark", "border-3", "bg-warning")
     }
-    else if(key == "d" && scale == "major" || key == "b" && scale == "minor"){
+    else if (key == "d" && scale == "major" || key == "b" && scale == "minor") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.getElementById("D2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("E2").classList.add("border-dark", "border-3", "bg-warning")
@@ -139,7 +139,7 @@ function generate() {
         document.getElementById("B2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
     }
-    else if(key == "d" && scale == "minor" || key == "f" && scale == "major"){
+    else if (key == "d" && scale == "minor" || key == "f" && scale == "major") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.getElementById("D2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("E2").classList.add("border-dark", "border-3", "bg-warning")
@@ -149,7 +149,7 @@ function generate() {
         document.getElementById("A#2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("C2").classList.add("border-dark", "border-3", "bg-warning")
     }
-    else if(key == "e" && scale == "major" || key == "c#" && scale == "minor"){
+    else if (key == "e" && scale == "major" || key == "c#" && scale == "minor") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.getElementById("E2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("F#2").classList.add("border-dark", "border-3", "bg-warning")
@@ -159,7 +159,7 @@ function generate() {
         document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("D#2").classList.add("border-dark", "border-3", "bg-warning")
     }
-    else if(key == "e" && scale == "minor" || key == "g" && scale == "major"){
+    else if (key == "e" && scale == "minor" || key == "g" && scale == "major") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.getElementById("E2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("F#2").classList.add("border-dark", "border-3", "bg-warning")
@@ -169,7 +169,7 @@ function generate() {
         document.getElementById("D2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("C2").classList.add("border-dark", "border-3", "bg-warning")
     }
-    else if(key == "f" && scale == "minor" || key == "g#" && scale == "major"){
+    else if (key == "f" && scale == "minor" || key == "g#" && scale == "major") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.getElementById("F2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("G2").classList.add("border-dark", "border-3", "bg-warning")
@@ -179,7 +179,7 @@ function generate() {
         document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("D#2").classList.add("border-dark", "border-3", "bg-warning")
     }
-    else if(key == "g" && scale == "minor" || key == "a#" && scale == "major"){
+    else if (key == "g" && scale == "minor" || key == "a#" && scale == "major") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.getElementById("G2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("A2").classList.add("border-dark", "border-3", "bg-warning")
@@ -189,7 +189,7 @@ function generate() {
         document.getElementById("D#2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("F2").classList.add("border-dark", "border-3", "bg-warning")
     }
-    else if(key == "a" && scale == "major" || key == "f#" && scale == "minor"){
+    else if (key == "a" && scale == "major" || key == "f#" && scale == "minor") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.getElementById("A2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("B2").classList.add("border-dark", "border-3", "bg-warning")
@@ -199,7 +199,7 @@ function generate() {
         document.getElementById("F#2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("G#2").classList.add("border-dark", "border-3", "bg-warning")
     }
-    else if(key == "b" && scale == "major" || key == "g#" && scale == "minor"){
+    else if (key == "b" && scale == "major" || key == "g#" && scale == "minor") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.getElementById("B2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
@@ -209,7 +209,7 @@ function generate() {
         document.getElementById("G#2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("A#2").classList.add("border-dark", "border-3", "bg-warning")
     }
-    else if(key == "c#" && scale == "major" || key == "a#" && scale == "minor"){
+    else if (key == "c#" && scale == "major" || key == "a#" && scale == "minor") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.getElementById("C#2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("D#2").classList.add("border-dark", "border-3", "bg-warning")
@@ -219,7 +219,7 @@ function generate() {
         document.getElementById("A#2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("B2").classList.add("border-dark", "border-3", "bg-warning")
     }
-    else if(key == "f#" && scale == "major" || key == "d#" && scale == "minor"){
+    else if (key == "f#" && scale == "major" || key == "d#" && scale == "minor") {
         document.querySelectorAll(".keys").forEach(element => element.classList.remove("border-dark", "border-3", "bg-warning"))
         document.getElementById("F#2").classList.add("border-dark", "border-3", "bg-warning")
         document.getElementById("G#2").classList.add("border-dark", "border-3", "bg-warning")
@@ -237,7 +237,6 @@ function generate() {
         }
     }
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.chord-tile').forEach(element => element.addEventListener('mouseenter', () => {
