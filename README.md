@@ -1,2 +1,2 @@
 # JS-Chord-Progression-Generator
- Simple JavaScript based chord progression generator with many different progression variants as well as visualization of the chords in a piano layout.
+ Simple JavaScript based chord progression generator with many different progression variants as well as visualization of the chords in a piano layout and notes inside the chosen scale.
