@@ -110,6 +110,7 @@ function generator(array) {
 }
 
 function generate() {
+    document.getElementById('scale-name').innerText = '"' + document.getElementById('key').value.toUpperCase() + ' ' + document.getElementById('scale').value.charAt(0).toUpperCase() + document.getElementById('scale').value.slice(1) + '" scale' 
     document.querySelectorAll(".key").forEach(element => element.classList.remove("border-dark", "border-3", "bg-danger"))
     var key = document.getElementById("key").value;
     var scale = document.getElementById("scale").value;
