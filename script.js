@@ -82,7 +82,6 @@ const progressions = [
     [4, 5, 3, 6]
 ]
 
-
 function generator(array) {
     let newProgression = [];
     let lastNumber = 0;
@@ -108,6 +107,13 @@ function generator(array) {
     return newProgression;
 
 }
+
+    document.querySelectorAll(".chord-tile").forEach(element => element.addEventListener('mouseenter',()=>{
+        element.classList.add('border-danger')
+    }));
+    document.querySelectorAll(".chord-tile").forEach(element => element.addEventListener('mouseleave',()=>{
+        element.classList.remove('border-danger')
+    }));
 
 function generate() {
     document.getElementById('scale-name').innerText = '"' + document.getElementById('key').value.toUpperCase() + ' ' + document.getElementById('scale').value.charAt(0).toUpperCase() + document.getElementById('scale').value.slice(1) + '" scale' 

@@ -127,15 +127,15 @@ button {
   font-size: 25px;
 }
 
-.footer {
-  font-size: 0.8rem;
-}
-
 .keyboard-container {
   width: 250px;
   height: 120px;
   margin: 0 auto;
 
+}
+
+.madeby{
+  font-size: 0.8rem;
 }
 
 .semitones-container {
